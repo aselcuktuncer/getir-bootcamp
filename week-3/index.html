@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <button id="btnGet" class="btn btn-primary">GET</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="userForm">
+            <div class="row" style="display: none">
+              <div class="mb-3">
+                <label for="inputId" class="form-label"></label>
+                <input
+                  type="number"
+                  placeholder="Id"
+                  class="form-control"
+                  id="inputId"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3">
+                <label for="inputName" class="form-label"></label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="form-control"
+                  id="inputName"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3">
+                <label for="inputEMail" class="form-label"></label>
+                <input
+                  type="text"
+                  placeholder="E-Mail"
+                  class="form-control"
+                  id="inputEMail"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="mb-3">
+                <label for="inputUserName" class="form-label"></label>
+                <input
+                  type="text"
+                  placeholder="User Name"
+                  class="form-control"
+                  id="inputUserName"
+                />
+              </div>
+            </div>
+
+            <button
+              id="btnPost"
+              onclick="saveUser(this.form); return false"
+              class="btn btn-success"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12" id="userList"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 pull-right" id="userToast"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="users"></div>
+    </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="./axios-index.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/lodash/lodash.min.js"></script>
+  </body>
+</html>
